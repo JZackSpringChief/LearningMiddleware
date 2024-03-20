@@ -8,33 +8,19 @@ app.UseRouting();
 //created endpoints
 app.UseEndpoints(endpoints =>
 {
-    endpoints.Map("/files/{filename}.{extension}", async
-    context =>
-    {
-        string? filename = Convert.ToString(context.Request.RouteValues["filename"]);
-        string? extension = Convert.ToString(context.Request.RouteValues["extension"]);
-        await context.Response.WriteAsync($"In files --- filename: {filename} --- extension: {extension}");
-    });
+    endpoints.Map("daily-digest-report{reportdate:datetime}", async context =>
+       {
+           if (context.Request.RouteValues.ContainsKey("reportdate"))
+           {
+               DateTime reportDate = Convert.ToDateTime(context.Request.RouteValues["reportdate"]);
+               await context.Response.WriteAsync($"In daily-digest-report: {reportDate.ToShortDateString()}");
+           }
+           else
+           {
+               await context.Response.WriteAsync("reportdate not provided");
+           }
+       });
 
-    endpoints.Map("employee/profile/{EmployeeName=KylieIsACutie}", async
-        context =>
-        {
-            string? employeeName = Convert.ToString(context.Request.RouteValues["employeename"]);
-            await context.Response.WriteAsync($"In Employee profile: {employeeName}");
-        });
-
-    endpoints.Map("products/details/{id?}", async context =>
-    {
-        if (context.Request.RouteValues.ContainsKey("id"))
-        {
-            int id = Convert.ToInt32(context.Request.RouteValues["id"]);
-            await context.Response.WriteAsync($"Product details: {id}");
-        }
-        else
-        {
-            await context.Response.WriteAsync($"Product details: id is not supplied");
-        }
-    });
 
 });
 
