@@ -2,39 +2,27 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.Use(async (context, next) =>
-{
-    Endpoint? endpoint = context.GetEndpoint();
-    if (endpoint != null)
-    {
-        await context.Response.WriteAsync($"Endpoint: {endpoint.DisplayName}\n");
-    }
-    await next(context);
-});
 //enabled routing
 app.UseRouting();
 
-app.Use(async (context, next) =>
-{
-    Endpoint? endpoint = context.GetEndpoint();
-    if (endpoint != null)
-    {
-        await context.Response.WriteAsync($"Endpoint: {endpoint.DisplayName}\n");
-    }
-    await next(context);
-});
 //created endpoints
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapGet("/map1", async (context) =>
+    endpoints.Map("/files/{filename}.{extension}", async
+    context =>
     {
-        await context.Response.WriteAsync("In Map 1");
+        string? filename = Convert.ToString(context.Request.RouteValues["filename"]);
+        string? extension = Convert.ToString(context.Request.RouteValues["extension"]);
+        await context.Response.WriteAsync($"In files --- filename: {filename} --- extension: {extension}");
     });
 
-    endpoints.MapPost("/map2", async (context) =>
-    {
-        await context.Response.WriteAsync("In Map 2");
-    });
+    endpoints.Map("employee/profile/{EmployeeName}", async
+        context =>
+        {
+            string? employeeName = Convert.ToString(context.Request.RouteValues["employeename"]);
+            await context.Response.WriteAsync($"In Employee profile: {employeeName}");
+        });
+
 });
 
 app.Run(async context =>
