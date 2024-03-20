@@ -1,21 +1,24 @@
+
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
-
-app.UseWhen(
-    context => context.Request.Query.ContainsKey("username"),
-    app =>
+//enabled routing
+app.UseRouting();
+//created endpoints
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapGet("/map1", async (context) =>
     {
-        app.Use(async (context, next) =>
-        {
-            await context.Response.WriteAsync("Hello from Middleware branch");
-            await next();
-        });
+        await context.Response.WriteAsync("In Map 1");
     });
 
+    endpoints.MapPost("/map2", async (context) =>
+    {
+        await context.Response.WriteAsync("In Map 2");
+    });
+});
 
 app.Run(async context =>
 {
-    await context.Response.WriteAsync("Hello from middleware at main chain");
+    await context.Response.WriteAsync($"Request received at {context.Request.Path}");
 });
-
 app.Run();
