@@ -39,6 +39,11 @@ app.UseEndpoints(async endpoints =>
 
         await context.Response.WriteAsync($"sales report - {year} - {month}");
     });
+
+    endpoints.Map("sales-report/2024/jan", async context =>
+    {
+        await context.Response.WriteAsync("sales report exclusivly for 2024 - Jan");
+    });
 });
 
 app.Run(async context =>
