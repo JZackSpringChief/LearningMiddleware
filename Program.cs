@@ -26,7 +26,13 @@ app.UseEndpoints(async endpoints =>
             Guid cityId = Guid.Parse(Convert.ToString(context.Request.RouteValues["cityid"])!);
             await context.Response.WriteAsync($"City Info: {cityId}");
         });
+    endpoints.Map("sales-report/{year:int:min(1900)}/{month:regex(^(apr|jul|oct|jan)$)}", async context =>
+    {
+        int year = Convert.ToInt32(context.Request.RouteValues["year"]);
+        string? month = Convert.ToString(context.Request.RouteValues["month"]);
 
+        await context.Response.WriteAsync($"sales report - {year} - {month}");
+    });
 });
 
 app.Run(async context =>
