@@ -6,7 +6,7 @@ var app = builder.Build();
 app.UseRouting();
 
 //created endpoints
-app.UseEndpoints(endpoints =>
+app.UseEndpoints(async endpoints =>
 {
     endpoints.Map("daily-digest-report{reportdate:datetime}", async context =>
        {
@@ -21,6 +21,11 @@ app.UseEndpoints(endpoints =>
            }
        });
 
+    endpoints.Map("cities/{cityid:guid}", async context =>
+        {
+            Guid cityId = Guid.Parse(Convert.ToString(context.Request.RouteValues["cityid"])!);
+            await context.Response.WriteAsync($"City Info: {cityId}");
+        });
 
 });
 
