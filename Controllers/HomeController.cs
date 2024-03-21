@@ -1,4 +1,4 @@
-
+using refreashOnCsharp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace refreashOnCsharp.Controllers;
@@ -16,6 +16,22 @@ public class HomeController : Controller
         return Content("<h1>Welcome<h1/> <h2>Hello from Index</h2>", "text/html");
     }
 
+    [Route("person")]
+
+    public JsonResult Person()
+    {
+        Person person = new()
+        {
+            Id = Guid.NewGuid(),
+            FirstName = "Kylie",
+            LastName = "Is A Cutie",
+            Age = 19
+        };
+        //return new JsonResult(person);
+        return Json(person);
+
+
+    }
     [Route("contact-us/{mobile:regex(^\\d{{10}}$)}")]
 
     public string Contact()
