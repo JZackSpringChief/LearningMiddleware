@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "WfKNcd6bWIgDkujxC7SrMkxS5kS/uaNiMfYAvPTXjt0=",
+  "Hash": "DSzqpKwXZlTdihX4UgeVTB0xPlmSaX74dTpYTU/5coc=",
   "Source": "refreashOnCsharp",
   "BasePath": "_content/refreashOnCsharp",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "refreashOnCsharp/wwwroot",
+      "Source": "refreashOnCsharp",
+      "ContentRoot": "/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/wwwroot/",
+      "BasePath": "_content/refreashOnCsharp",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
