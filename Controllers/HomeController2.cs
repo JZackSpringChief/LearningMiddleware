@@ -7,7 +7,7 @@ namespace refreashOnCsharp.Controllers;
 //[Route("[controller]")]
 public class HomeController2 : Controller
 {
-    [Route("book")]
+    [Route("bookstore")]
     public IActionResult Index()
     {
         if (!Request.Query.ContainsKey("bookid"))
@@ -33,6 +33,6 @@ public class HomeController2 : Controller
         {
             return Unauthorized("User is not logged in");
         }
-        return Content("Kylie's a Cutie!!!");
+        return RedirectToAction("Books", "Store", true);
     }
 }
