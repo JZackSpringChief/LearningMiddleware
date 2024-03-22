@@ -8,7 +8,7 @@ namespace refreashOnCsharp.Controllers;
 public class HomeController2 : Controller
 {
     [Route("bookstore/{bookid?}/{isloggedin?}")]
-    public IActionResult Index([FromQuery] int? bookid, [FromQuery] bool? isloggedin, Book book)
+    public IActionResult Index(int? bookid, [FromQuery] bool? isloggedin, Book book)
     {
         if (bookid.HasValue == false)
         {
