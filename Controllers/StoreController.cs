@@ -6,9 +6,10 @@ namespace refreashOnCsharp.Controllers;
 
 public class StoreController : Controller
 {
-    [Route("store/books")]
+    [Route("store/books/{id}")]
     public IActionResult Books()
     {
-        return Content("Kylie Is a Cutie!!!");
+        int id = Convert.ToInt32(Request.RouteValues["id"]);
+        return Content($"Kylie Is a Cutie!!! and shes a {id}");
     }
 }

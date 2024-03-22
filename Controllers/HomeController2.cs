@@ -33,6 +33,11 @@ public class HomeController2 : Controller
         {
             return Unauthorized("User is not logged in");
         }
-        return RedirectToAction("Books", "Store", true);
+        return RedirectToActionPermanent("Books", "Store", new
+        {
+            id = bookId
+        });
+        // return LocalRedirectResult($"store/books/{bookId}");
+
     }
 }
