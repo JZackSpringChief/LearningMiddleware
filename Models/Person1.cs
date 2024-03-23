@@ -1,6 +1,6 @@
 
 using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using refreashOnCsharp.CustomValidators;
 
 namespace refreashOnCsharp.Models;
 
@@ -26,7 +26,8 @@ public class Person1
     [Required]
     [Range(0, 999.99, ErrorMessage = "{0} should be between ${1} and ${2}")]
     public string? Price { get; set; }
-
+    [MinimunYearValidator(2005, ErrorMessage = "Year cannot be greater than or equal to {0}")]
+    public DateTime? DateOfBirth { get; set; }
     public override string ToString()
     {
         return $"Person Object - - - Person Name: {PersonName}, Email: {Email}, Phone: {Phone}, Password: {Password}, Confirm Password: {ConfirmPassword}, Price: {Price} ";
