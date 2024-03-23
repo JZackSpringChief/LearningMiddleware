@@ -6,7 +6,7 @@ public class HomeController3 : Controller
 {
     [Route("register")]
     //[Bind(nameof(Person1.PersonName), nameof(Person1.Email), nameof(Person1.Password), nameof(Person1.ConfirmPassword))]
-    public IActionResult Index(Person1 person1)
+    public IActionResult Index([FromBody] Person1 person1)
     {
         if (!ModelState.IsValid)
         {
