@@ -28,6 +28,10 @@ public class Person1
     public string? Price { get; set; }
     [MinimunYearValidator(2005, ErrorMessage = "Year cannot be greater than or equal to {0}")]
     public DateTime? DateOfBirth { get; set; }
+
+    public DateTime? FromDate { get; set; }
+    [DateRangeValidator("FromDate", ErrorMessage = "'From Date' should be older than or equal to 'to date")]
+    public DateTime? ToDate { get; set; }
     public override string ToString()
     {
         return $"Person Object - - - Person Name: {PersonName}, Email: {Email}, Phone: {Phone}, Password: {Password}, Confirm Password: {ConfirmPassword}, Price: {Price} ";
