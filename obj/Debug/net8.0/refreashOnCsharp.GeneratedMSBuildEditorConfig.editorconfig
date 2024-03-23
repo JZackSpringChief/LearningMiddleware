@@ -17,3 +17,7 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = /Users/zackspringchief/Documents/Csharp/refreashOnCsharp
 build_property._RazorSourceGeneratorDebug = 
+
+[/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/Views/Shared/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL2luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
