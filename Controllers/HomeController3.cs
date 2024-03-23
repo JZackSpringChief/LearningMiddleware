@@ -7,6 +7,14 @@ public class HomeController3 : Controller
     [Route("register")]
     public IActionResult Index(Person1 person1)
     {
+        if (!ModelState.IsValid)
+        {
+            string errors = string.Join("\n",
+            ModelState.Values.SelectMany(value => value.Errors).Select
+            (err => err.ErrorMessage));
+
+            return BadRequest(errors);
+        }
         return Content($"{person1}");
     }
 

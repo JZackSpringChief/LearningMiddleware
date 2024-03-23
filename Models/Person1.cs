@@ -5,7 +5,7 @@ namespace refreashOnCsharp.Models;
 
 public class Person1
 {
-    [Required]
+    [Required(ErrorMessage = "Person Cant be null or empty")]
     public string? PersonName { get; set; }
     [Required]
     public string? Email { get; set; }
