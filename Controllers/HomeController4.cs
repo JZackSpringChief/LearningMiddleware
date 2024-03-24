@@ -10,7 +10,7 @@ public class HomeController4 : Controller
     {
         ViewData["appTitle"] = "Asp.Net core Demo app";
 
-        List<Person3> people = new List<Person3>()
+        List<Person3> people = new()
         {
             new Person3 {Name = "Kylie", DateOfBirth = DateTime.Parse("2005-08-19"), PersonGender = Gender.Female},
             new Person3 {Name = "Zack", DateOfBirth = DateTime.Parse("1989-11-30"), PersonGender = Gender.Male},

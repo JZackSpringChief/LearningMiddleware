@@ -7,13 +7,11 @@
             @ViewData["appTitle"]
         </title>
         <meta carset="utf-8" />
+        <link href="~/StyleSheet.css" rel="stylesheet"/>
     </head>
     <body>
         <h1>Welcome</h1>
-        @{
-            List<Person3>? people = (List<Person3>)ViewData["people"];
-        }
-        @foreach(Person3 person in people) 
+        @foreach(Person3 person in ViewBag.people) 
         {
             <div>@person.Name, </div>
             <span> @person.PersonGender</span>
