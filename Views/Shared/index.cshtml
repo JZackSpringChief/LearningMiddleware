@@ -1,5 +1,5 @@
 @using refreashOnCsharp.Models
-
+@model IEnumerable<Person3>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +10,7 @@
     </head>
     <body>
         <h1>Welcome</h1>
-        @foreach(Person3 person in ViewBag.people) 
+        @foreach(Person3 person in Model) 
         {
             <div>@person.Name, </div>
             <span> @person.PersonGender</span>
