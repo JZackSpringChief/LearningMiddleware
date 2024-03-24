@@ -17,6 +17,7 @@ public class HomeController4 : Controller
             new Person3 {Name = "Blair", DateOfBirth = DateTime.Parse("2025-07-13"), PersonGender = Gender.Male},
         };
         ViewData["people"] = people;
+        // or can do this ViewBag.people = people;
         return View();
         //return new PartialViewResult() { ViewName = "abc" }; lengthy way
     }

@@ -4,8 +4,7 @@
 <html>
     <head>
         <title>
-            @ViewData["appTitle"]
-        </title>
+            @ViewBag.appTitle</title>
         <meta carset="utf-8" />
         <link href="~/StyleSheet.css" rel="stylesheet"/>
     </head>
@@ -17,7 +16,7 @@
             <span> @person.PersonGender</span>
             @if (person.DateOfBirth != null)
             {
-                <span>@person.DateOfBirth.Value.ToString("MM/dd/yyyy")</span>
+                <span>@person.DateOfBirth?.ToString("MM/dd/yyyy")</span>
 
             }
         }
