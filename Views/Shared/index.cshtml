@@ -1,7 +1,7 @@
 @using refreashOnCsharp.Models
 @{
     string appTitle = "Asp.Net core Demo app";
-    Person3 person = new() { Name = "Kylie", DateOfBirth = Convert.ToDateTime("2005-08-19")};
+    Person3 person = new() { Name = "Kylie", DateOfBirth = Convert.ToDateTime("2005-08-19"), PersonGender = Gender.Female };
 }
 <!DOCTYPE html>
 <html>
@@ -14,9 +14,25 @@
     <body>
         <h1>Welcome</h1>
         <h2>Hello @person.Name </h2>
-        @{
-            double age = Math.Round((DateTime.Now - person.DateOfBirth).TotalDays /365.25);
+        @if (person.DateOfBirth.HasValue)
+        {
+            double age = Math.Round((DateTime.Now - person.DateOfBirth).Value.TotalDays /365.25);
+             <h3> @age years old</h3>
         }
-        <h3> @age years old</h3>
+        else
+        {
+            <h3>Date of Birth is unknown</h3>
+        }
+       @switch(person.PersonGender)
+       {
+        case Gender.Male:
+        <p> November 19 is Internation Men's Day</p>
+        ;
+        break;
+        case Gender.Female:
+        <p> Kylie is a Cutie</p>
+        ;
+        break;
+       }
     </body>
 </html>
