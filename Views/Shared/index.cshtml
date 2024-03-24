@@ -9,6 +9,20 @@
         };
     //Person3 person = new() { Name = "Kylie", DateOfBirth = Convert.ToDateTime("2005-08-19"), PersonGender = Gender.Female };
 }
+@{
+    double? GetAge(DateTime? dateOfBirth)
+    {
+        if (dateOfBirth is not null)
+        {
+            return Math.Round((DateTime.Now - dateOfBirth.Value).TotalDays / 365.25);
+        }
+        else
+        {
+            return null;
+        }
+    }
+    string alertMessage = $"<script>alert('{people.Count} people found')</script>";
+}
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,17 +32,20 @@
         <meta carset="utf-8" />
     </head>
     <body>
+        @Html.Raw(alertMessage)
         <h1>Welcome</h1>
         @for(int i = 0; i < 2; i++) 
-
         {
+            
             Person3 person = people[i];
             <div>@person.Name</div>
-            <span>, </span>
+            <span> ,</span>
             <span> @person.PersonGender</span>
             @if (person.DateOfBirth != null)
             {
                 <span>@person.DateOfBirth.Value.ToString("MM/dd/yyyy")</span>
+
+                <span> @GetAge(person.DateOfBirth) years olds</span>
             }
         }
        
