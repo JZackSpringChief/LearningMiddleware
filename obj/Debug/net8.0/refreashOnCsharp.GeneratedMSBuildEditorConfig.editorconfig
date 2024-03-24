@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/zackspringchief/Documents/Csharp/refreashOnCsharp
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/Views/Shared/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/Views/Shared/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL2luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

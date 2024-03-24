@@ -21,4 +21,20 @@ public class HomeController4 : Controller
         return View("Index", people);
         //return new PartialViewResult() { ViewName = "abc" }; lengthy way
     }
+    [Route("person-details/{name}")]
+    public IActionResult Details(string? name)
+    {
+        if (name == null)
+
+            return Content("Person name can't be null");
+        List<Person3> people = new()
+        {
+            new Person3 {Name = "Kylie", DateOfBirth = DateTime.Parse("2005-08-19"), PersonGender = Gender.Female},
+            new Person3 {Name = "Zack", DateOfBirth = DateTime.Parse("1989-11-30"), PersonGender = Gender.Male},
+            new Person3 {Name = "Blair", DateOfBirth = DateTime.Parse("2025-07-13"), PersonGender = Gender.Male},
+        };
+        Person3? matchingPerson = people.Where(temp => temp.Name == name).FirstOrDefault();
+        return View(matchingPerson);
+
+    }
 }

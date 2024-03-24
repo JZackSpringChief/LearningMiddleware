@@ -12,14 +12,15 @@
         <h1>Welcome</h1>
         @foreach(Person3 person in Model) 
         {
-            <div>@person.Name, </div>
-            <span> @person.PersonGender</span>
+            <div>@person.Name,
+                 <span> @person.PersonGender</span>
+                 </div>
+           
             @if (person.DateOfBirth != null)
             {
                 <span>@person.DateOfBirth?.ToString("MM/dd/yyyy")</span>
 
             }
         }
-       
     </body>
 </html>
