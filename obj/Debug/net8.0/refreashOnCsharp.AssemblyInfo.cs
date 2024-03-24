@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("refreashOnCsharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c277d14d9e65de6f597d2041f9d280ddf3f3e785")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd8c873bc28f331d77d10a5596602b58f74847d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("refreashOnCsharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("refreashOnCsharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
