@@ -19,8 +19,10 @@
     </head>
     <body>
         <h1>Welcome</h1>
-        @foreach (Person3 person in people)
+        @for(int i = 0; i < 2; i++) 
+
         {
+            Person3 person = people[i];
             <div>@person.Name</div>
             <span>, </span>
             <span> @person.PersonGender</span>
