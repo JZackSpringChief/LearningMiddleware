@@ -18,10 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/zackspringchief/Documents/Csharp/refreashOnCsharp
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/FullCourse/Views/Shared/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = RnVsbENvdXJzZS9WaWV3cy9TaGFyZWQvRGV0YWlscy5jc2h0bWw=
+[/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/Views/Home/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9pbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/FullCourse/Views/Shared/index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = RnVsbENvdXJzZS9WaWV3cy9TaGFyZWQvaW5kZXguY3NodG1s
+[/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
