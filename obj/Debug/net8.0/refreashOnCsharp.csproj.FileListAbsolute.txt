@@ -27,3 +27,7 @@
 /Users/zackspringchief/Documents/Csharp/refreashOnCsharp/bin/Debug/net8.0/refreashOnCsharp.staticwebassets.runtime.json
 /Users/zackspringchief/Documents/Csharp/refreashOnCsharp/obj/Debug/net8.0/refreashOnCsharp.RazorAssemblyInfo.cache
 /Users/zackspringchief/Documents/Csharp/refreashOnCsharp/obj/Debug/net8.0/refreashOnCsharp.RazorAssemblyInfo.cs
+/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/bin/Debug/net8.0/Service.dll
+/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/bin/Debug/net8.0/Service.pdb
+/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/obj/Debug/net8.0/refreashOnCsharp.csproj.AssemblyReference.cache
+/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/obj/Debug/net8.0/refreash.04AD77EE.Up2Date

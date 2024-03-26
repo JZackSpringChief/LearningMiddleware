@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "refreashOnCsharp/1.0.0": {
+        "dependencies": {
+          "Service": "1.0.0"
+        },
         "runtime": {
           "refreashOnCsharp.dll": {}
+        }
+      },
+      "Service/1.0.0": {
+        "runtime": {
+          "Service.dll": {}
         }
       }
     }
   },
   "libraries": {
     "refreashOnCsharp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
