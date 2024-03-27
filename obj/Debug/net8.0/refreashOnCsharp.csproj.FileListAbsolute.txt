@@ -31,3 +31,5 @@
 /Users/zackspringchief/Documents/Csharp/refreashOnCsharp/bin/Debug/net8.0/Service.pdb
 /Users/zackspringchief/Documents/Csharp/refreashOnCsharp/obj/Debug/net8.0/refreashOnCsharp.csproj.AssemblyReference.cache
 /Users/zackspringchief/Documents/Csharp/refreashOnCsharp/obj/Debug/net8.0/refreash.04AD77EE.Up2Date
+/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/bin/Debug/net8.0/ServiceContracts.dll
+/Users/zackspringchief/Documents/Csharp/refreashOnCsharp/bin/Debug/net8.0/ServiceContracts.pdb

@@ -1,14 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
 using Service;
+using ServiceContracts;
 namespace refreashOnCsharp.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly CitiesService _citiesService;
+    private readonly ICitiesService _citiesService;
 
-    public HomeController()
+    public HomeController(ICitiesService citiesService)
     {
-        _citiesService = new CitiesService();
+        _citiesService = citiesService;//new CitiesService();
     }
 
     [Route("/")]
